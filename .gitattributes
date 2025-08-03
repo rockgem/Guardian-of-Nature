@@ -1,0 +1,13 @@
+# Normalize text files to LF for cross-platform consistency
+* text=auto eol=lf
+
+# Treat image and binary assets as binary
+*.png binary
+*.svg binary
+*.import binary
+*.json binary
+*.translation binary
+
+# Keep crash reports and export config from diffing
+mono_crash.*.json binary
+export.cfg text
