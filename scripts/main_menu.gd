@@ -5,9 +5,9 @@ func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://Playground.tscn")
 
 
-func _on_load_pressed() -> void:
-	print("Load Pressed")
+func _on_save_pressed() -> void:
+	pass # Replace with function body.
 
 
-func _on_quit_pressed() -> void:
+func _on_exit_pressed() -> void:
 	get_tree().quit()

@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Guardian of Nature Godot"
-run/main_scene="uid://dgpp150klar6d"
+run/main_scene="uid://dxwe5ub34ewnx"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/window_width_override=1920
+window/size/window_height_override=1080
 
 [dotnet]
 
@@ -48,7 +53,11 @@ move_right={
 
 [plugins]
 
-ai_assistant_hub/llm_api="ollama_api"
+ai_assistant_hub/llm_api="gemini_api"
 ai_assistant_hub/preferences/thinking_target=0
 ai_assistant_hub/preferences/skip_greeting=false
 ai_assistant_hub/preferences/always_scroll_to_bottom=false
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

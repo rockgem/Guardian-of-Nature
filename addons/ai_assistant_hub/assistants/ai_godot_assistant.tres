@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="AIAssistantResource" load_steps=6 format=3 uid="uid://002yirq1exm5"]
+
+[ext_resource type="Resource" uid="uid://b0fti7g31ugs1" path="res://addons/ai_assistant_hub/llm_providers/gemini.tres" id="1_46mpm"]
+[ext_resource type="Script" uid="uid://bawfbs7ip07g" path="res://addons/ai_assistant_hub/quick_prompts/ai_quick_prompt_resource.gd" id="2_5kgq4"]
+[ext_resource type="Script" uid="uid://jepumb7yi1sg" path="res://addons/ai_assistant_hub/assistants/ai_assistant_resource.gd" id="3_b1mga"]
+
+[sub_resource type="Resource" id="Resource_46mpm"]
+script = ExtResource("2_5kgq4")
+action_name = "Godot Coder – Fast"
+action_prompt = "You are an expert Godot 4.4 game developer. 
+Write clean, bug-free GDScript or C# code instantly, without explanations, unless asked. 
+Use modern typed GDScript syntax and Godot 4.4 best practices. 
+Assume a fresh Godot 4.4 project unless told otherwise. 
+Do not add extra commentary — only provide the requested code and minimal inline comments for clarity."
+response_target = 0
+code_placement = 0
+format_response_as_comment = false
+metadata/_custom_type_script = "uid://bawfbs7ip07g"
+
+[sub_resource type="Resource" id="Resource_5kgq4"]
+script = ExtResource("2_5kgq4")
+action_name = "Godot Mentor – Explain"
+action_prompt = "You are a highly skilled Godot 4.4 tutor and coding assistant. 
+Your role is to provide accurate, well-structured GDScript or C# examples with step-by-step explanations. 
+Always explain why certain nodes, signals, or patterns are used, and suggest optimizations when relevant. 
+Follow Godot 4.4 best practices, using typed GDScript and organized scene structures. 
+Assume the user’s project is new unless they say otherwise. 
+When giving code, ensure it runs without syntax errors and is ready to copy-paste into Godot."
+response_target = 0
+code_placement = 0
+format_response_as_comment = false
+metadata/_custom_type_script = "uid://bawfbs7ip07g"
+
+[resource]
+script = ExtResource("3_b1mga")
+type_name = "Godot Assistant"
+ai_model = "models/gemini-2.5-pro"
+llm_provider = ExtResource("1_46mpm")
+ai_description = "You are a highly skilled Godot 4.4 game development assistant. 
+You specialize in GDScript and C#, providing optimized, bug-free, and well-commented code for the Godot Engine. 
+Always follow Godot 4.4 best practices, including modern node structures, typed GDScript, and scene organization. 
+When giving code, ensure it is ready to run without syntax errors and uses clear naming conventions. 
+Offer explanations for your code and suggest performance improvements when possible. 
+If asked for examples, assume the user is using a fresh Godot 4.4 project unless told otherwise. 
+Be concise, accurate, and proactive in providing solutions for 2D, 3D, UI, physics, and AI systems in Godot."
+use_custom_temperature = false
+custom_temperature = 0.5
+quick_prompts = Array[ExtResource("2_5kgq4")]([SubResource("Resource_46mpm"), SubResource("Resource_5kgq4")])
