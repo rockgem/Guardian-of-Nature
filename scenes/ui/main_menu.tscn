@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://dgpp150klar6d"]
 
-[ext_resource type="Texture2D" uid="uid://dxhhwv68vb8du" path="res://assets/sprites/main menu.png" id="1_7vrkn"]
-[ext_resource type="Script" uid="uid://byvsaasdm6ww7" path="res://scripts/main_menu.gd" id="1_fu7sn"]
-[ext_resource type="FontFile" uid="uid://l66ubgv68oql" path="res://assets/sprites/GrapeSoda.ttf" id="2_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://dxhhwv68vb8du" path="res://assets/sprites/images/main menu.png" id="1_7vrkn"]
+[ext_resource type="Script" uid="uid://byvsaasdm6ww7" path="res://scripts/ui/main_menu.gd" id="1_fu7sn"]
+[ext_resource type="FontFile" uid="uid://l66ubgv68oql" path="res://assets/sprites/fonts/GrapeSoda.ttf" id="2_fu7sn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
 texture = ExtResource("1_7vrkn")
@@ -67,7 +67,7 @@ offset_top = 87.0
 offset_right = 160.0
 offset_bottom = 240.0
 grow_horizontal = 2
-theme_override_constants/separation = 8
+theme_override_constants/separation = 6
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2

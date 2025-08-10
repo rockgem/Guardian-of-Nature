@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://c6r651w7f6xt6"]
 
-[ext_resource type="Texture2D" uid="uid://clfe8vwtmhvd0" path="res://assets/sprites/ExamplePlayerSprite.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://d17ko46w5y5lj" path="res://scripts/player.gd" id="1_onrkg"]
-[ext_resource type="Script" uid="uid://b6cbft033jpv2" path="res://scripts/player_state_machine.gd" id="3_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://clfe8vwtmhvd0" path="res://assets/sprites/characters/ExamplePlayerSprite.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://d17ko46w5y5lj" path="res://scripts/player/player.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://b6cbft033jpv2" path="res://scripts/player/player_state_machine.gd" id="3_i3pqv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d17em"]
 
