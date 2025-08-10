@@ -9,8 +9,8 @@ func _on_start_pressed() -> void:
 
 # Called when the "Save" button is pressed.
 # Currently a placeholder—add code here later to save the Guardian’s progress in the wild!
-func _on_save_pressed() -> void:
-	pass  # Replace with function body.
+func _on_load_pressed() -> void:
+	pass # Replace with function body.
 
 # Called when the "Exit" button is pressed.
 # Safely closes the game, letting the Guardian rest until their next adventure!

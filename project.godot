@@ -14,11 +14,13 @@ config/name="Guardian of Nature Godot"
 run/main_scene="uid://dgpp150klar6d"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+boot_splash/main_scene="uid://dgpp150klar6d"
 
 [display]
 
 window/size/window_width_override=1920
 window/size/window_height_override=1080
+window/stretch/mode="viewport"
 
 [dotnet]
 
