@@ -34,8 +34,12 @@ func _ready():
 # The || (OR) checks ensure animations update only when needed!
 @warning_ignore("unused_parameter")
 func _process(delta):
-	direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
-	direction.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+	#direction.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
+	#direction.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+	direction = Vector2(
+		Input.get_axis("move_left", "move_right"),
+		Input.get_axis("move_up", "move_down")
+	).normalized()
 	pass
 
 # Called every physics frame to move the Guardian using physics.
