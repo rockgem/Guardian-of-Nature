@@ -56,7 +56,7 @@ func SetDirection() -> bool:
 	if direction.y == 0:
 		new_dir = Vector2.LEFT if direction.x < 0 else Vector2.RIGHT
 	elif direction.x == 0:
-		new_dir = Vector2.UP if direction.x < 0 else Vector2.DOWN  # Note: Should use direction.y here
+		new_dir = Vector2.UP if direction.y < 0 else Vector2.DOWN  # Note: Should use direction.y here
 	if new_dir == cardinal_direction:
 		return false
 	cardinal_direction = new_dir
