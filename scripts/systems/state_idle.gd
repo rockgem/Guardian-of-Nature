@@ -9,7 +9,7 @@ extends State
 
 
 # Called when this state is entered (e.g., switching from idle to walking).
-# Use this to start animations or set initial conditions for the Guardian’s journey!
+# Use this to start animations or set initial conditions for the Guardian’s journey!	
 func Enter() -> void:
 	player.UpdateAnimation("idle")
 	pass
