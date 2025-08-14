@@ -12,6 +12,7 @@ var attacking : bool = false
 
 @onready var walk: State_Walk = $"../Walk"
 @onready var idle: State_Idle = $"../Idle"
+@onready var hurt_box: HurtBox = $"../../Interactions/HurtBox"
 
 @onready var attack_animation: AnimationPlayer = $"../../Sprite2D/AttackEffects/AnimationPlayer"
 @onready var animation_player: AnimationPlayer = $"../../AnimationPlayer"
@@ -31,6 +32,9 @@ func Enter() -> void:
 	audio.play()
 	
 	attacking = true
+	
+	await get_tree().create_timer( 0.075 ).timeout
+	hurt_box.monitoring = true 
 	pass
 
 # Called when this state is exited (e.g., moving from walking to planting).
@@ -38,6 +42,7 @@ func Enter() -> void:
 func Exit() -> void:
 	animation_player.animation_finished.disconnect( EndAttack )
 	attacking = false
+	hurt_box.monitoring = false
 	pass
 
 # Called every frame during the _process loop, with the time step (delta) in seconds.

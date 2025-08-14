@@ -11,6 +11,7 @@ var cardinal_direction: Vector2 = Vector2.DOWN
 # This guides the Guardian through the pixel art wilderness!
 var direction: Vector2 = Vector2.ZERO
 
+var speed := 120.0
 
 # Reference to the AnimationPlayer node for playing animations, set up when ready.
 # This brings the Guardian’s pixel art to life with smooth transitions!
@@ -22,6 +23,8 @@ var direction: Vector2 = Vector2.ZERO
 
 @onready var state_machine: PlayerStateMachine = $StateMachine
 
+
+signal DirectionChanged( new_direction: Vector2 )
 
 # Called when the player node is initialized in the scene.
 # Use this to set up the Guardian’s starting conditions in the forest!
@@ -44,7 +47,7 @@ func _process(delta):
 
 # Called every physics frame to move the Guardian using physics.
 # move_and_slide() ensures smooth movement and collision handling in the forest!
-func _physics_process(delta):
+func _physics_process(_delta):
 	move_and_slide()
 
 # Determines if the Guardian’s direction should change based on movement.
@@ -60,6 +63,7 @@ func SetDirection() -> bool:
 	if new_dir == cardinal_direction:
 		return false
 	cardinal_direction = new_dir
+	DirectionChanged.emit( new_dir )
 	sprite_2d.scale.x = -1 if cardinal_direction == Vector2.LEFT else 1  # Flips sprite for left direction
 	return true
 

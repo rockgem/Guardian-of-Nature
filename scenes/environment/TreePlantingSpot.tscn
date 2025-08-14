@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://viemb7d3etrq"]
+
+[ext_resource type="Script" uid="uid://bbquy8bmdfj4m" path="res://scripts/entities/tree_planting_spot.gd" id="1_mcct0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mcct0"]
+
+[node name="TreePlantingSpot" type="Area2D"]
+disable_mode = 2
+collision_layer = 1024
+collision_mask = 512
+monitoring = false
+script = ExtResource("1_mcct0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mcct0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
