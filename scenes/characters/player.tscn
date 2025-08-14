@@ -1,12 +1,14 @@
-[gd_scene load_steps=26 format=3 uid="uid://c6r651w7f6xt6"]
+[gd_scene load_steps=28 format=3 uid="uid://c6r651w7f6xt6"]
 
 [ext_resource type="Script" uid="uid://d17ko46w5y5lj" path="res://scripts/player/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://c1p362siab8l8" path="res://assets/sprites/characters/PlayerSprite02.png" id="2_atpat"]
 [ext_resource type="Texture2D" uid="uid://barc8xjxnl2l2" path="res://assets/sprites/characters/AttackSprite01.png" id="3_6eyoc"]
 [ext_resource type="Script" uid="uid://b6cbft033jpv2" path="res://scripts/player/player_state_machine.gd" id="3_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://chl27ldolq46m" path="res://assets/sprites/characters/Shadow.png" id="3_qgnko"]
 [ext_resource type="Script" uid="uid://by86vj4fx4pit" path="res://scripts/systems/state_idle.gd" id="4_dyp2m"]
 [ext_resource type="Script" uid="uid://dtkeq1an4o542" path="res://scripts/systems/state_walk.gd" id="5_atpat"]
 [ext_resource type="Script" uid="uid://bcr6w7myhcyp8" path="res://scripts/systems/state_attack.gd" id="6_kqtwu"]
+[ext_resource type="AudioStream" uid="uid://ncx5p6bb27cw" path="res://assets/sounds/SwordSwoosh.wav" id="8_eojnx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d17em"]
 
@@ -436,6 +438,12 @@ texture = ExtResource("2_atpat")
 hframes = 16
 vframes = 3
 
+[node name="Shadow" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 0.627451)
+show_behind_parent = true
+position = Vector2(0, 20)
+texture = ExtResource("3_qgnko")
+
 [node name="AttackEffects" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(0, 10)
 texture = ExtResource("3_6eyoc")
@@ -463,6 +471,12 @@ script = ExtResource("5_atpat")
 
 [node name="Attack" type="Node" parent="StateMachine"]
 script = ExtResource("6_kqtwu")
+attack_sound = ExtResource("8_eojnx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Audio"]
+max_polyphony = 4

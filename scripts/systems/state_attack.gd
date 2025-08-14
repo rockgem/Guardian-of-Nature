@@ -6,10 +6,17 @@ extends State
 
 var attacking : bool = false
 
+@export_range(1,20,0.5) var decelerate_speed : float = 5.0
+@export var attack_sound : AudioStream
+@onready var audio: AudioStreamPlayer2D = $"../../Audio/AudioStreamPlayer2D"
+
 @onready var walk: State_Walk = $"../Walk"
 @onready var idle: State_Idle = $"../Idle"
+
 @onready var attack_animation: AnimationPlayer = $"../../Sprite2D/AttackEffects/AnimationPlayer"
 @onready var animation_player: AnimationPlayer = $"../../AnimationPlayer"
+
+
 
 
 # Called when this state is entered (e.g., switching from idle to walking).
@@ -18,7 +25,12 @@ func Enter() -> void:
 	player.UpdateAnimation("attack")
 	attack_animation.play( "attack_" + player.AnimDirection() )
 	animation_player.animation_finished.connect( EndAttack )
-	attacking = true		
+	
+	audio.stream = attack_sound
+	audio.pitch_scale = randf_range( 0.9, 1.1 )
+	audio.play()
+	
+	attacking = true
 	pass
 
 # Called when this state is exited (e.g., moving from walking to planting).
@@ -32,7 +44,7 @@ func Exit() -> void:
 # Handle non-physics updates here, like updating the Guardian’s animation or UI.
 # Return a new state if the Guardian needs to transition (e.g., to a new task)!
 func Process(_delta: float) -> State:
-	player.velocity = Vector2.ZERO
+	player.velocity -= player.velocity * decelerate_speed * _delta
 	
 	if attacking == false:
 		if player.direction == Vector2.ZERO:
