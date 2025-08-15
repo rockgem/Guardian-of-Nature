@@ -31,50 +31,14 @@ position = Vector2(582, 360)
 [node name="Plant2" parent="." instance=ExtResource("6_3rqv3")]
 position = Vector2(422, 294)
 
-[node name="Plant3" parent="." instance=ExtResource("6_3rqv3")]
-position = Vector2(517, 227)
-
-[node name="Plant4" parent="." instance=ExtResource("6_3rqv3")]
-position = Vector2(660, 232)
-
-[node name="Plant5" parent="." instance=ExtResource("6_3rqv3")]
-position = Vector2(685, 314)
-
-[node name="Plant6" parent="." instance=ExtResource("6_3rqv3")]
-position = Vector2(480, 350)
-
-[node name="Plant7" parent="." instance=ExtResource("6_3rqv3")]
-position = Vector2(46, 269)
-
 [node name="Plant8" parent="." instance=ExtResource("6_3rqv3")]
 position = Vector2(44, 399)
-
-[node name="Plant9" parent="." instance=ExtResource("6_3rqv3")]
-position = Vector2(111, 376)
-
-[node name="Plant10" parent="." instance=ExtResource("6_3rqv3")]
-position = Vector2(114, 223)
-
-[node name="Plant11" parent="." instance=ExtResource("6_3rqv3")]
-position = Vector2(349, 358)
 
 [node name="Plant12" parent="." instance=ExtResource("6_3rqv3")]
 position = Vector2(363, 200)
 
-[node name="Plant13" parent="." instance=ExtResource("6_3rqv3")]
-position = Vector2(438, 429)
-
 [node name="Plant14" parent="." instance=ExtResource("6_3rqv3")]
 position = Vector2(680, 420)
-
-[node name="Plant15" parent="." instance=ExtResource("6_3rqv3")]
-position = Vector2(545, 422)
-
-[node name="Plant16" parent="." instance=ExtResource("6_3rqv3")]
-position = Vector2(606, 174)
-
-[node name="Plant17" parent="." instance=ExtResource("6_3rqv3")]
-position = Vector2(448, 181)
 
 [node name="Plant18" parent="." instance=ExtResource("6_3rqv3")]
 position = Vector2(761, 371)
@@ -82,17 +46,8 @@ position = Vector2(761, 371)
 [node name="Plant19" parent="." instance=ExtResource("6_3rqv3")]
 position = Vector2(772, 283)
 
-[node name="Plant20" parent="." instance=ExtResource("6_3rqv3")]
-position = Vector2(769, 204)
-
 [node name="Plant21" parent="." instance=ExtResource("6_3rqv3")]
 position = Vector2(823, 427)
-
-[node name="Plant22" parent="." instance=ExtResource("6_3rqv3")]
-position = Vector2(174, 461)
-
-[node name="Plant23" parent="." instance=ExtResource("6_3rqv3")]
-position = Vector2(187, 301)
 
 [node name="Plant24" parent="." instance=ExtResource("6_3rqv3")]
 position = Vector2(263, 247)
