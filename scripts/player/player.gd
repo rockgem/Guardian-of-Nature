@@ -7,6 +7,8 @@ extends CharacterBody2D
 # This helps determine animations and movement orientation!
 var cardinal_direction: Vector2 = Vector2.DOWN
 
+const DIR_4 = [ Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP ]
+
 # The current movement direction based on player input, initialized as no movement.
 # This guides the Guardian through the pixel art wilderness!
 var direction: Vector2 = Vector2.ZERO
@@ -53,15 +55,15 @@ func _physics_process(_delta):
 # Determines if the Guardian’s direction should change based on movement.
 # Returns true if the cardinal direction updates, triggering an animation update!
 func SetDirection() -> bool:
-	var new_dir: Vector2 = cardinal_direction
 	if direction == Vector2.ZERO:
 		return false
-	if direction.y == 0:
-		new_dir = Vector2.LEFT if direction.x < 0 else Vector2.RIGHT
-	elif direction.x == 0:
-		new_dir = Vector2.UP if direction.y < 0 else Vector2.DOWN  # Note: Should use direction.y here
+	
+	var direction_id: int = int( round( ( direction + cardinal_direction * 0.1 ).angle() / TAU * DIR_4.size() ) )
+	var new_dir = DIR_4[ direction_id ]
+	  # Note: Should use direction.y here
 	if new_dir == cardinal_direction:
 		return false
+	
 	cardinal_direction = new_dir
 	DirectionChanged.emit( new_dir )
 	sprite_2d.scale.x = -1 if cardinal_direction == Vector2.LEFT else 1  # Flips sprite for left direction

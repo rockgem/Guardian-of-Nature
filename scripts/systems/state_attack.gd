@@ -12,7 +12,7 @@ var attacking : bool = false
 
 @onready var walk: State_Walk = $"../Walk"
 @onready var idle: State_Idle = $"../Idle"
-@onready var hurt_box: HurtBox = $"../../Interactions/HurtBox"
+@onready var hurt_box: HurtBox = %AttackHurtbox
 
 @onready var attack_animation: AnimationPlayer = $"../../Sprite2D/AttackEffects/AnimationPlayer"
 @onready var animation_player: AnimationPlayer = $"../../AnimationPlayer"
