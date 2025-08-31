@@ -12,7 +12,6 @@ func _on_start_pressed() -> void:
 func _on_load_pressed() -> void:
 	pass # Replace with function body.
 
-# Called when the "Exit" button is pressed.
-# Safely closes the game, letting the Guardian rest until their next adventure!
-func _on_exit_pressed() -> void:
+
+func _on_quit_pressed() -> void:
 	get_tree().quit()

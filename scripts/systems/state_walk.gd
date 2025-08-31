@@ -11,7 +11,7 @@ extends State
 # Called when this state is entered (e.g., switching from idle to walking).
 # Use this to start animations or set initial conditions for the Guardian’s journey!
 func Enter() -> void:
-	player.UpdateAnimation("walk")
+	player.UpdateAnimation("run")
 	pass
 
 # Called when this state is exited (e.g., moving from walking to planting).
@@ -29,7 +29,7 @@ func Process(_delta: float) -> State:
 	player.velocity = player.direction * move_speed
 	
 	if player.SetDirection():
-		player.UpdateAnimation("walk")
+		player.UpdateAnimation("run")
 	return null
 
 # Called every physics frame during the _physics_process loop, with the time step (delta) in seconds.
