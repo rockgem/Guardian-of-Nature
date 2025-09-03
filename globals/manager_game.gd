@@ -7,13 +7,35 @@ signal scene_loaded
 
 var player_data = {}
 
+var fader_duration = 1.0
 
-var fader_duration = .5
 var scene_path_being_loaded = ''
+var mininum_load_time = 1.0
+var load_time_tick = 0.0
 
 
 func _ready() -> void:
 	player_data = get_data("res://reso/data/player_data.json")
+
+
+func _physics_process(delta: float) -> void:
+	if scene_path_being_loaded != '':
+		load_time_tick += delta
+		
+		var e: ResourceLoader.ThreadLoadStatus = ResourceLoader.load_threaded_get_status(scene_path_being_loaded)
+		
+		if e == ResourceLoader.ThreadLoadStatus.THREAD_LOAD_LOADED and load_time_tick > mininum_load_time:
+			get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(scene_path_being_loaded))
+			
+			await get_tree().create_timer(1.0).timeout
+			
+			scene_path_being_loaded = ''
+			$LoadingScreen.visible = false
+			
+			scene_loaded.emit()
+			fade_out()
+		else:
+			$LoadingScreen.visible = true
 
 
 func get_data(path) -> Dictionary:

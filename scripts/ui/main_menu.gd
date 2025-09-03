@@ -5,7 +5,7 @@ extends Control
 # Called when the "Start" button is pressed.
 # Transitions the player to the Playground scene, where the forest restoration begins!
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/environment/Playground.tscn")
+	ManagerGame.load_scene("res://scenes/environment/Playground.tscn")
 
 # Called when the "Save" button is pressed.
 # Currently a placeholder—add code here later to save the Guardian’s progress in the wild!
