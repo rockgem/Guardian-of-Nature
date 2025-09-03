@@ -20,6 +20,10 @@ boot_splash/main_scene="uid://dgpp150klar6d"
 
 PauseMenu="*res://scenes/ui/pause_menu.tscn"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [dotnet]
 
 project/assembly_name="Guardian of Nature Godot"

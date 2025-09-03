@@ -73,7 +73,7 @@ func SetDirection() -> bool:
 # Updates the Guardian’s animation based on the current state and direction.
 # Plays an animation like "idle_down" or "walk_side" to reflect their actions!
 func UpdateAnimation(state:String) -> void:
-	animation_player.play(state + "_" + AnimDirection())
+	animation_player.play(state)
 	pass
 
 # Returns the animation direction suffix based on the cardinal direction.

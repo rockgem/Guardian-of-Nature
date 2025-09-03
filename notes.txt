@@ -1,0 +1,54 @@
+Game Design Document (GDD): Guardian of Nature
+Version: 1.0
+Game Title: Guardian of Nature
+1. Logline:
+Guardian of Nature is a cozy 2D RPG about restoring a polluted valley to its former glory by planting, cleaning, and nurturing nature, all while using stealth and wits to avoid the poachers who threaten its recovery.
+2. Game Overview:
+Guardian of Nature is a top-down, non-violent RPG with life-sim and crafting elements. The player is the Guardian of a polluted valley. The core gameplay loop is Exploration, Restoration, and Crafting. The primary conflict is avoiding poacher NPCs.
+3. Art Style:
+The game will be built exclusively using the "Sunnyside" asset pack, leveraging its vibrant 16-bit pixel art style.
+4. Gameplay Mechanics:
+Pillars of Restoration:
+Tree Planting: Use "Seeds" to grow trees from the Sunnyside asset pack.
+River Cleaning: Use "Cleaning Kits" to transform polluted water tiles into clean ones.
+Wildlife Habitats: Craft and place items like beehives to attract ambient wildlife.
+The Antagonist (Poachers):
+Follow simple patrol paths. Player must use stealth to avoid their line of sight.
+Getting caught sends the player to a safe point with a minor penalty.
+Player can craft non-lethal tools like traps and smoke bombs.
+Inventory and Crafting:
+Simple inventory for resources and tools.
+Crafting is done at a workbench using simple recipes.
+Quests and Progression:
+NPCs from the Sunnyside character assets provide quests to guide the player.
+5. Story & World:
+The player is the grandchild of the last Guardian of the Verdant Valley. Their goal is to restore the valley's heart, a giant, wilting tree, and drive out the faceless "G.R.I.M.E." corporation, taking up their mantle as the new Guardian of Nature.
+Development Roadmap
+This is our step-by-step plan.
+
+
+Phase 1: Foundation Setup
+Task 1.1: Project & File Structure
+Task 1.2: Player Controller (using a Sunnyside character for 4-directional movement and animation)
+Task 1.3: World Creation (TileMap and TileSet using Sunnyside assets)
+
+Phase 2: World Restoration System
+Task 2.1: Tree Planting Mechanic (using Sunnyside tree sprites)
+Task 2.2: River Cleaning Mechanic (using Sunnyside water tiles)
+Task 2.3: Wildlife Habitats & Spawning
+
+
+Phase 3: Quest & Inventory System
+Task 3.1: Basic Inventory System
+Task 3.2: Simple Crafting
+Task 3.3: Basic UI (HUD) (using Sunnyside UI elements and icons)
+Task 3.4: NPC and Quest System (using Sunnyside characters)
+
+Phase 4: Non-Lethal Combat & Poacher AI
+Task 4.1: Poacher AI (using a Sunnyside character)
+Task 4.2: Player Stealth & Non-Lethal Tools
+
+Phase 5 & 6: Polish, UI, and Finalization
+Task 5.1: Save/Load System
+Task 5.2: UI Screens (Title, Menus)
+Task 5.3: Final Polish (Sound, Music, etc.)
