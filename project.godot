@@ -19,6 +19,7 @@ boot_splash/main_scene="uid://dgpp150klar6d"
 [autoload]
 
 PauseMenu="*res://scenes/ui/pause_menu.tscn"
+ManagerGame="*res://globals/ManagerGame.tscn"
 
 [display]
 

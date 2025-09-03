@@ -1,0 +1,9 @@
+{
+	"money": 500,
+	"stats": {
+		"move_speed": 100.0
+	}, 
+	"month": 1,
+	"day": 1,
+	"year": 1,
+}

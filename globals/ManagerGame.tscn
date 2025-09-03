@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdltfhvol2qhi"]
+
+[ext_resource type="Script" uid="uid://cig2ljfbs04k" path="res://globals/manager_game.gd" id="1_c45a4"]
+[ext_resource type="Shader" uid="uid://df7jw4wsxqqu5" path="res://reso/Fader.gdshader" id="2_c6wat"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_643rl"]
+shader = ExtResource("2_c6wat")
+shader_parameter/progress = 0.0
+shader_parameter/diamondPixelSize = 10.0
+
+[node name="ManagerGame" type="Node"]
+process_mode = 3
+script = ExtResource("1_c45a4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Fader" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_643rl")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.0734442, 0.0836402, 0.144354, 1)
