@@ -1,14 +1,30 @@
-[gd_scene load_steps=10 format=3 uid="uid://bdltfhvol2qhi"]
+[gd_scene load_steps=11 format=3 uid="uid://bdltfhvol2qhi"]
 
 [ext_resource type="Script" uid="uid://cig2ljfbs04k" path="res://globals/manager_game.gd" id="1_c45a4"]
 [ext_resource type="Shader" uid="uid://df7jw4wsxqqu5" path="res://reso/Fader.gdshader" id="2_c6wat"]
 [ext_resource type="Shader" uid="uid://bw6mk53ggr2lw" path="res://reso/crt.gdshader" id="3_643rl"]
 [ext_resource type="Texture2D" uid="uid://bc318xurqeu6u" path="res://assets/ui/UI_ALL.png" id="4_p7eyk"]
+[ext_resource type="PackedScene" uid="uid://be7fcoc3by66u" path="res://actors/objs/Cursor.tscn" id="5_032wa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_643rl"]
 shader = ExtResource("2_c6wat")
 shader_parameter/progress = 0.0
 shader_parameter/diamondPixelSize = 20.0
+
+[sub_resource type="Animation" id="Animation_032wa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_p7eyk"]
 resource_name = "loading"
@@ -25,21 +41,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-}
-
-[sub_resource type="Animation" id="Animation_032wa"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_032wa"]
@@ -61,6 +62,7 @@ shader_parameter/brightness_boost = 1.2
 [node name="ManagerGame" type="Node"]
 process_mode = 3
 script = ExtResource("1_c45a4")
+metadata/_edit_horizontal_guides_ = [-127.0]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -90,16 +92,16 @@ color = Color(0.0745098, 0.0823529, 0.145098, 1)
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 96.0
-offset_top = -69.0
-offset_right = 171.0
-offset_bottom = -46.0
+offset_left = 48.0
+offset_top = -34.0
+offset_right = 123.0
+offset_bottom = -22.0
 grow_vertical = 0
+theme_override_font_sizes/font_size = 8
 text = "Loading..."
 
 [node name="Sprite2D" type="Sprite2D" parent="LoadingScreen/Label"]
-position = Vector2(-26, 12)
-scale = Vector2(1.75, 1.75)
+position = Vector2(-13, 6)
 texture = ExtResource("4_p7eyk")
 hframes = 16
 region_enabled = true
@@ -117,14 +119,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -277.0
-offset_top = -93.0
-offset_right = 277.0
-offset_bottom = 94.0
+offset_left = -207.0
+offset_top = -52.0
+offset_right = 207.0
+offset_bottom = 53.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.479183, 0.479183, 0.479183, 1)
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 8
 text = "Gwapoha nako oi"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -139,3 +141,8 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.0745098, 0.0823529, 0.145098, 1)
 metadata/_edit_lock_ = true
+
+[node name="Cursor" type="CanvasLayer" parent="."]
+layer = 128
+
+[node name="Cursor" parent="Cursor" instance=ExtResource("5_032wa")]
