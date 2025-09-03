@@ -32,6 +32,11 @@ project/assembly_name="Guardian of Nature Godot"
 
 enabled=PackedStringArray("res://addons/ai_assistant_hub/plugin.cfg", "res://addons/gamedev_assistant/plugin.cfg")
 
+[global_group]
+
+CamLimiTL=""
+CamLimitBR=""
+
 [input]
 
 ui_accept={

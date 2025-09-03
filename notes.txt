@@ -2,11 +2,17 @@ Game Design Document (GDD): Guardian of Nature
 Version: 1.0
 Game Title: Guardian of Nature
 1. Logline:
-Guardian of Nature is a cozy 2D RPG about restoring a polluted valley to its former glory by planting, cleaning, and nurturing nature, all while using stealth and wits to avoid the poachers who threaten its recovery.
+Guardian of Nature is a cozy 2D RPG about restoring a polluted valley to its former glory by planting, cleaning, 
+and nurturing nature, all while using stealth and wits to avoid the poachers who threaten its recovery.
+
 2. Game Overview:
-Guardian of Nature is a top-down, non-violent RPG with life-sim and crafting elements. The player is the Guardian of a polluted valley. The core gameplay loop is Exploration, Restoration, and Crafting. The primary conflict is avoiding poacher NPCs.
+Guardian of Nature is a top-down, non-violent RPG with life-sim and crafting elements. 
+The player is the Guardian of a polluted valley. The core gameplay loop is Exploration, 
+Restoration, and Crafting. The primary conflict is avoiding poacher NPCs.
+
 3. Art Style:
 The game will be built exclusively using the "Sunnyside" asset pack, leveraging its vibrant 16-bit pixel art style.
+
 4. Gameplay Mechanics:
 Pillars of Restoration:
 Tree Planting: Use "Seeds" to grow trees from the Sunnyside asset pack.
@@ -21,8 +27,10 @@ Simple inventory for resources and tools.
 Crafting is done at a workbench using simple recipes.
 Quests and Progression:
 NPCs from the Sunnyside character assets provide quests to guide the player.
+
 5. Story & World:
-The player is the grandchild of the last Guardian of the Verdant Valley. Their goal is to restore the valley's heart, a giant, wilting tree, and drive out the faceless "G.R.I.M.E." corporation, taking up their mantle as the new Guardian of Nature.
+The player is the grandchild of the last Guardian of the Verdant Valley. Their goal is to restore the valley's heart, 
+a giant, wilting tree, and drive out the faceless "G.R.I.M.E." corporation, taking up their mantle as the new Guardian of Nature.
 Development Roadmap
 This is our step-by-step plan.
 

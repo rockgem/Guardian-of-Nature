@@ -1,10 +1,17 @@
-[gd_scene load_steps=3 format=4 uid="uid://d3dnfutyeh3pm"]
+[gd_scene load_steps=5 format=4 uid="uid://d3dnfutyeh3pm"]
 
 [ext_resource type="PackedScene" uid="uid://c6r651w7f6xt6" path="res://scenes/characters/player.tscn" id="1_80c3a"]
+[ext_resource type="PackedScene" uid="uid://bkpiqlucbljnu" path="res://actors/objs/CamLimitTL.tscn" id="3_jqf5j"]
 [ext_resource type="TileSet" uid="uid://ci7ods6dcfs36" path="res://reso/new_tile_set.tres" id="3_r5e6a"]
+[ext_resource type="PackedScene" uid="uid://bqx3a4wgcvvv2" path="res://actors/objs/CamLimitBR.tscn" id="4_jqf5j"]
 
 [node name="Playground" type="Node2D"]
 y_sort_enabled = true
+
+[node name="CamLimitTl" parent="." instance=ExtResource("3_jqf5j")]
+
+[node name="CamLimitBR" parent="." instance=ExtResource("4_jqf5j")]
+position = Vector2(1166, 670)
 
 [node name="Ground" type="TileMapLayer" parent="."]
 z_index = -5

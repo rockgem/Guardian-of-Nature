@@ -31,6 +31,14 @@ signal DirectionChanged( new_direction: Vector2 )
 # Called when the player node is initialized in the scene.
 # Use this to set up the Guardian’s starting conditions in the forest!
 func _ready():
+	var tl = get_tree().get_nodes_in_group("CamLimiTL")[0]
+	var br = get_tree().get_nodes_in_group("CamLimitBR")[0]
+	if tl and br:
+		$Camera2D.limit_left = tl.global_position.x
+		$Camera2D.limit_top = tl.global_position.y
+		$Camera2D.limit_bottom = br.global_position.y
+		$Camera2D.limit_right = br.global_position.x
+	
 	state_machine.Initialize(self)
 	pass
 
