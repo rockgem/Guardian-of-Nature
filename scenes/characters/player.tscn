@@ -141,8 +141,13 @@ script = ExtResource("6_kqtwu")
 attack_sound = ExtResource("8_eojnx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+<<<<<<< Updated upstream
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
+=======
+zoom = Vector2(2, 2)
+editor_draw_limits = true
+>>>>>>> Stashed changes
 
 [node name="Audio" type="Node" parent="."]
 

@@ -1,7 +1,7 @@
 🌿 Guardian of Nature
 "A serene blend of nature, introspection, and experimentation — this is not just a game, it's a growing ecosystem."
 
-An interactive eco-journal built in Godot Engine, Guardian of Nature invites players to immerse themselves in tranquil environments, document their journey, and manipulate elements of nature through experimentation. It’s a meditative experience wrapped in thoughtful design.
+An interactive eco-journal built in Godot Engine, Guardian of Nature invites players to immerse themselves in tranquil environments, document their journey, and manipulate elements of nature through experimentation. It’s a meditative experience wrapped in thoughtful design.  
 
 🎮 Game Highlights
 📝 Digital Journal — Track daily events, thoughts, and environmental shifts
